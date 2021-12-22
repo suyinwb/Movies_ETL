@@ -37,7 +37,7 @@ Amazing Prime loves the dataset and wants to keep it updated on a daily basis. B
 #### 3. Define Strategy & Metrics
 **Resource:** Jupyter Notebook, Python, SQLAlchemy, Postgres 14, pgAdmin, SQL
 
-1. xxx
+1. load all the 3 datasets as stated above into Jupyter Notebook to be analysed & potentially cleaned.
 1. xxx
 
 #### 4. Data Retrieval Plan
@@ -73,12 +73,27 @@ Transforming a messy dataset into a clean dataset is an iterative process. As yo
 One thing to watch out for is to make nondestructive edits as much as possible while designing your pipeline. That means it's better to keep your raw data in one variable, and put the cleaned data in another variable. It takes up more memory, but it makes tracking the iterative process of data cleaning easier.
 
 
+After inspecting the competing data side by side, this is the decision on cleaning the dataset:
+```
+# Competing data:
+# Wiki                     Movielens                Resolution
+#--------------------------------------------------------------------------
+# title_wiki               title_kaggle             Drop Wikipedia
+# running_time             runtime                  Keep Kaggle; fill in zeros with Wikipedia data.
+# budget_wiki              budget_kaggle            Keep Kaggle; fill in zeros with Wikipedia data.
+# box_office               revenue                  Keep Kaggle; fill in zeros with Wikipedia data.
+# release_date_wiki        release_date_kaggle      Drop Wikipedia
+# Language                 original_language        Drop Wikipedia
+# Production company(s)    production_companies     Drop Wikipedia
+```
+
+
 #### 6. Analyse for Trends
 
 Results from data filter above will give us more in-depth information regarding the different departments, roles and future retirees.
 
 #### 7. Acknowledging Limitations
-pgAdmin is an old application for Postgres front end GUI. So sometimes when closing the application, the database will be corrupted and wiped out by pgAdmin. Do a full backup before closing.
+There are moments when we have to analyse the "unclean" dataset and make decision on the tradeoff between time spent vs how many dataset to save / drop. In this situation, due to the low percentage of the "corrupt" data, the decision has been to drop the data from our analysis.
 
 #### 8. Making the Call:
 The "Proper" Conclusion is indicated below on [Summary](#summary)
