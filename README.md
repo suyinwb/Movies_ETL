@@ -16,7 +16,7 @@ Our Wikipedia data is especially messy. As much as editors try to be consistent,
 
 ## Overview of Project
 ### Purpose
-Amazing Prime loves the dataset and wants to keep it updated on a daily basis. Britta needs my help to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. I will need to refactor the code from this module to create one function that takes in the three files—Wikipedia data, Kaggle metadata, and the MovieLens rating data—and performs the ETL process by adding the data to a PostgreSQL database.
+Amazing Prime loves the dataset and wants to keep it updated on a daily basis. Britta needs my help to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. I will need to refactor the code from this module to create one function that takes in the three files -  Wikipedia data, Kaggle metadata, and the MovieLens rating data; and performs the ETL process by adding the data to a PostgreSQL database.
 
 Therefore creating an automated ETL pipeline that can be run once daily. The database containing tables: moves and ratings will be refreshed with new data by replace and drop table with each run.
 
