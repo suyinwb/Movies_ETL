@@ -168,6 +168,8 @@ Once we combine all the components of [Clean Wikipedia Data](#clean-wikipedia-da
 
 ![Movies Query](resources/movies_query.png)
 
+
+
 >Checking data in Ratings table
 
 ![Ratings Query](resources/ratings_query.png)
