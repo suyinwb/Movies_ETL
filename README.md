@@ -52,6 +52,7 @@ Therefore creating an automated ETL pipeline that can be run once daily. The dat
 ##### 5.1. What defines bad data?
 
 Bad data comes in three states:
+
 5.1.1. Beyond repair
 Data beyond repair could be data that has been overwritten or has suffered severe data corruption during storage or transfer (such as power loss during writing, voltage spikes, or hard-drive failures). The worst-case example would be having data with every value missing. All the information is lost and unrecoverable. For data beyond repair, all we can do is delete it and move on.
 
@@ -77,7 +78,7 @@ Transforming a messy dataset into a clean dataset is an iterative process. As cl
 One thing to watch out for is to make nondestructive edits as much as possible while designing the pipeline. That means it's better to keep raw data in one variable, and put the cleaned data in another variable. It takes up more memory, but it makes tracking the iterative process of data cleaning easier.
 
 
-##### 5.2 Data Cleaning Strategy
+##### 5.2. Data Cleaning Strategy
 
 After inspecting the competing data side by side, this is the decision on cleaning the dataset:
 ```
@@ -101,8 +102,10 @@ As we progressed with the ETL process as stated here:
 1. Wikipedia Data Cleaning
 2. Kaggle Data Cleaning
 3. Connect To database
- 3.1.  Replace movies table
- 3.2. Drop ratings table
+
+  3.1.  Replace movies table
+
+    3.2. Drop ratings table
 4. Insert ratings data into database
 
 Add all the 4 steps above into the function below to enable automation.
@@ -149,7 +152,7 @@ There are more data points on the origin of the Y axis than on the origin of the
 
 ![Box Office vs Revenue](resources/box_office_vs_revenue.png)
 
-We might be getting thrown off by the scale of that large data point, so we will only look at the scatter plot for everything less than $1 billion in box_office.
+We might be getting thrown off by the scale of that large data point, so we will only look at the scatter plot for everything less than $1 billion in box_office with [movies_df['box_office'] < 10**9].
 
 
 >Wikipedia VS Kaggle Release Dates
