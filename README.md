@@ -96,7 +96,20 @@ After inspecting the competing data side by side, this is the decision on cleani
 
 #### 6. Analyse for Trends
 
-Results from data filter above will give us more in-depth information regarding the different departments, roles and future retirees.
+Results from data cleaning above gives us a more defined and consistent data to be added into our Postgres database on a regular basis.
+As we progressed with the ETL process as stated here:
+1. Wikipedia Data Cleaning
+2. Kaggle Data Cleaning
+3. Connect To database
+ * Replace movies table
+ * Drop ratings table
+4. Insert ratings data into database
+
+Add all the 4 steps above into the function below to enable automation. 
+```
+extract_transform_load()
+```
+
 
 #### 7. Acknowledging Limitations
 There are moments when we have to analyse the "unclean" dataset and make decision on the tradeoff between time spent vs how many dataset to save / drop. In this situation, due to the low percentage of the "corrupt" data, the decision has been to drop the data from our analysis.
