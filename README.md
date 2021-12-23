@@ -162,7 +162,7 @@ For release_date_wiki and release_date_kaggle, we can't directly make a scatter 
 
 ## Summary
 
-Once we combine all the component
+Once we combine all the components of [Clean Wikipedia Data](#clean-wikipedia-data), [Clean Kaggle Data](#clean-kaggle-data) and [Database Connect & Insertion](#database-connect--insertion) into a function, we can invoke that function to run automatically with a cron as an automated ETL data pipeline. This in turn will update the database daily with the results from our ETL pipeline. See the below output from our database.
 
 >Checking data in Movies table
 
