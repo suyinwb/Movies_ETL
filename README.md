@@ -115,9 +115,9 @@ extract_transform_load()
 #### 7. Acknowledging Limitations
 There are moments when we have to analyse the "unclean" dataset and make decision on the tradeoff between time spent vs how many dataset to save / drop. In this situation, due to the low percentage of the "corrupt" data, the decision has been to drop the data from our analysis.
 
-As I have both PostgreSQL 11 and PostgreSQL 14, I have to use port 5433 for PostgreSQL 14.\
+As I have both PostgreSQL 11 and PostgreSQL 14, I have to use port 5433 for PostgreSQL 14.
 
-Refer to documentation at https://docs.sqlalchemy.org/en/14/core/connections.html to open connection to database via DBAPI and drop the table. There are other methods using Metadata or connectionless Python way but as of now, this is the method I've used as it is the easiest and fastest implementation for me. 
+Refer to documentation at https://docs.sqlalchemy.org/en/14/core/connections.html to open connection to database via DBAPI and drop the table. There are other methods using Metadata or connectionless Python way but as of now, this is the method I've used as it is the easiest and fastest implementation for me.
 
 #### 8. Making the Call:
 The "Proper" Conclusion is indicated below on [Summary](#summary)
