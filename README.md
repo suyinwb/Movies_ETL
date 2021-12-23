@@ -105,7 +105,7 @@ As we progressed with the ETL process as stated here:
  * Drop ratings table
 4. Insert ratings data into database
 
-Add all the 4 steps above into the function below to enable automation. 
+Add all the 4 steps above into the function below to enable automation.
 ```
 extract_transform_load()
 ```
@@ -120,9 +120,13 @@ The "Proper" Conclusion is indicated below on [Summary](#summary)
 ## Analysis
 
 
->Total Employees
+>Checking data in Movies table
 
-![Total Employees](total_employees.png)
+![Movies Query](resources/movies_query.png)
+
+>Checking data in Ratings table
+
+![Ratings Query](resources/ratings_query.png)
 
 
 ## Summary
