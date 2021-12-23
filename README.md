@@ -39,12 +39,12 @@ Therefore creating an automated ETL pipeline that can be run once daily. The dat
 #### 3. Define Strategy & Metrics
 **Resource:** Jupyter Notebook, Python, SQLAlchemy, Postgres 14, pgAdmin, SQL
 
-1. load all the 3 datasets as stated above into Jupyter Notebook to be analysed & potentially cleaned.
-1. after cleaning, the dataset will be divided into movies dataframe and ratings dataframe. These dataframes will be insert into Postgres database as 2 tables.
+* Load all the 3 datasets as stated above into Jupyter Notebook to be analysed & potentially cleaned.
+* After cleaning, the dataset will be divided into movies dataframe and ratings dataframe. These dataframes will be insert into Postgres database as 2 tables.
 
 #### 4. Data Retrieval Plan
-1. Import raw csv & json data into Jupyter notebook.
-1. After cleaning, we will merge the 3 datasets into 2 dataframes: movies and ratings. These 2 dataframes will be inserted into Postgres database: movie_data.
+* Import raw csv & json data into Jupyter notebook.
+* After cleaning, we will merge the 3 datasets into 2 dataframes: movies and ratings. These 2 dataframes will be inserted into Postgres database: movie_data.
 
 
 #### 5. Assemble & Clean the Data
@@ -102,10 +102,8 @@ As we progressed with the ETL process as stated here:
 1. Wikipedia Data Cleaning
 2. Kaggle Data Cleaning
 3. Connect To database
-
-  3.1.  Replace movies table
-
-    3.2. Drop ratings table
+* 3.1 Replace movies table
+* 3.2. Drop ratings table
 4. Insert ratings data into database
 
 Add all the 4 steps above into the function below to enable automation.
@@ -152,14 +150,14 @@ There are more data points on the origin of the Y axis than on the origin of the
 
 ![Box Office vs Revenue](resources/box_office_vs_revenue.png)
 
-We might be getting thrown off by the scale of that large data point, so we will only look at the scatter plot for everything less than $1 billion in box_office with [movies_df['box_office'] < 10**9].
+We might be getting thrown off by the scale of that large data point, so we will only look at the scatter plot for everything less than $1 billion in box_office with **[movies_df['box_office'] < 10**9]**.
 
 
 >Wikipedia VS Kaggle Release Dates
 
 ![Wikipedia VS Kaggle Release Dates](resources/wiki_vs_kaggle_releasedates.png)
 
-
+For release_date_wiki and release_date_kaggle, we can't directly make a scatter plot, because the scatter plot only works on numeric data. However, there's a tricky workaround that we can use. We'll use the regular line plot (which can plot date data), and change the style to only put dots by adding style='.' to the plot() method. There is a wild outlier around 2006. Choose some rough cutoff dates to single out that one movie, look for any movie whose release date according to Wikipedia is after 1996, but whose release date according to Kaggle is before 1965.
 
 
 ## Summary
