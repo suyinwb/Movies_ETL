@@ -52,23 +52,23 @@ Therefore creating an automated ETL pipeline that can be run once daily. The dat
 ##### 5.1 What defines bad data?
 
 Bad data comes in three states:
-* Beyond repair
+5.1.1 Beyond repair
 Data beyond repair could be data that has been overwritten or has suffered severe data corruption during storage or transfer (such as power loss during writing, voltage spikes, or hard-drive failures). The worst-case example would be having data with every value missing. All the information is lost and unrecoverable. For data beyond repair, all we can do is delete it and move on.
 
-* Badly damaged
+5.1.2 Badly damaged
 Data that is badly damaged may have good data that we can recover, but it will take time and effort to repair the damaged data. This can be garbled data, with a lot of missing values, from inconsistent sources, or existing in multiple columns. Consider trade-offs to pick the best solution (even if the "best" solution isn't perfect, but rather the "best-available" solution). To repair badly damaged data, try these strategies:
-  -Filling in missing data by
-  -interpolating between existing data points, or
-  -extrapolating from existing data
-  -Standardizing units of measure (e.g., monetary values stored in multiple currencies)
-  -Consolidating data from multiple columns
+  * Filling in missing data by
+  * interpolating between existing data points, or
+  * extrapolating from existing data
+  * Standardizing units of measure (e.g., monetary values stored in multiple currencies)
+  * Consolidating data from multiple columns
 
-* Wrong form
+5.1.3 Wrong form
 data in the wrong form should usually be fixed—that is, the data is good but can't be used in its current form. "Good" data in the wrong form can be data that is too granular or detailed, numeric data stored as strings, or data that needs to be split into multiple columns (e.g., address data). To remedy good data in the wrong form, try these strategies:
-  -Reshape the data
-  -Convert data types
-  -Parse text data to the correct format
-  -Split columns
+  * Reshape the data
+  * Convert data types
+  * Parse text data to the correct format
+  * Split columns
 
 
 It's important to document data cleaning assumptions as well as decisions and their motivations. Later decisions depend on earlier decisions made, which can be too much to remember. Any assumptions that were part of an earlier decision can, if forgotten, ruin later steps.
