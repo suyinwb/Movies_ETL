@@ -152,7 +152,7 @@ There are more data points on the origin of the Y axis than on the origin of the
 
 ![Box Office vs Revenue](resources/box_office_vs_revenue.png)
 
-We might be getting thrown off by the scale of that large data point, so we will only look at the scatter plot for everything less than $1 billion in box_office with **[movies_df['box_office'] < 10**9]**.
+We might be getting thrown off by the scale of that large data point, so we will only look at the scatter plot for everything less than $1 billion in box_office with [movies_df['box_office'] < 10**9].
 
 
 >Wikipedia VS Kaggle Release Dates
